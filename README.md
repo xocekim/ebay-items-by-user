@@ -7,5 +7,6 @@ python3 -mvenv venv
 . venv/bin/activate
 python -mpip install --upgrade pip
 pip install -r requirements.txt
-echo -e "$(crontab -l)\n* * * * * cd $(dirname $(realpath main.py)) && venv/bin/python main.py giffgaff" | crontab -
+crontab -e
+# */10 * * * * cd $DIR && venv/bin/python main.py $SELLER_NAME
 ```
